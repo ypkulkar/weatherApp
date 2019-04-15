@@ -1,7 +1,35 @@
+/* body{
+    display: flex;
+} */
+
 header{
-    background-color: blue;
+    background: linear-gradient(rgb(73,138,220),rgb(98,59,156));
+    display: flex;
+}
+
+#introduction{
+    background-color: yellow;
 }
 
 main{
     background-color: yellow;
+    display: flex;
 }
+
+/* p, h3, h2{
+    width: 10%;
+} */
+
+
+#doppler-image{
+   //display: none;
+   height: 30px;
+   width: 30px;
+}
+
+/* @media (min-width: 500px){
+    #doppler-image{
+        display: flex;
+    }
+} */
+
