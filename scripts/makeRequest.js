@@ -14,7 +14,7 @@ function createCORSRequest(method, url) {
 function makeCorsRequest() {
 
   let chooseCity = document.querySelector("#choose-city");
-  var cityName = chooseCity.value; // Can change this to get info on the weather    
+  let cityName = chooseCity.value; // Can change this to get info on the weather    
 
   let url = `http://api.openweathermap.org/data/2.5/forecast/hourly?q=${cityName},CA,US&units=imperial&APPID=43b14c4193c2fc236bbfaef7b0b2e860`
 
@@ -40,7 +40,7 @@ function makeCorsRequest() {
   // Actually send request to server
   xhr.send();
 
-  
+
   return xhr;
 }
 
