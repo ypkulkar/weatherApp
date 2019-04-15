@@ -1,10 +1,14 @@
-/* body{
-    display: flex;
-} */
+body{
+    min-height: 100vh; 
+}
 
-header{
+#upper{
     background: linear-gradient(rgb(73,138,220),rgb(98,59,156));
     display: flex;
+}
+
+#upper > div{
+    width: 20%;
 }
 
 #introduction{
@@ -16,9 +20,9 @@ main{
     display: flex;
 }
 
-/* p, h3, h2{
+p, h3, h2{
     width: 10%;
-} */
+}
 
 
 #doppler-image{
