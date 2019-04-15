@@ -6,7 +6,6 @@ var today = new Date();
 const submitButton = document.querySelector("#submit-button");
 
 submitButton.addEventListener("click",function(){
-  //cityName = chooseCity.value;
    xhr = makeCorsRequest();
    xhr.onreadystatechange = orscFunction;
 });
@@ -15,11 +14,10 @@ orscFunction = function(){
     if(xhr.readyState == 4){ // Request is done
         if(xhr.status == 200){ // Everything is smooth
             object = JSON.parse(xhr.responseText);
-            //console.log(object);
             printDisplay(object);
         }
         if(xhr.status == 404){
-            //console.log("Not found");
+            console.log("Not found");
         }
     }
 };
@@ -27,7 +25,11 @@ orscFunction = function(){
 xhr = makeCorsRequest();
 xhr.onreadystatechange = orscFunction;
 
-/* --------------------------------  ---------------------------------------- */
+
+
+
+
+/* -------------------------------- Helper Functions ---------------------------------------- */
 
 function printDisplay(obj){
     console.log(`City: ${obj.city.name}`);
