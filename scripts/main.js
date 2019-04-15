@@ -8,6 +8,9 @@ xhr.onreadystatechange = function(){
             let object = JSON.parse(xhr.responseText);
             console.log(object);
         }
+        if(xhr.status == 404){
+            console.log("Not found");
+        }
     }
 };
 

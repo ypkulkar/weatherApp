@@ -1,5 +1,7 @@
 "strict mode";
 
+let cityName = "Davis"; // Can change this to get info on the weather
+
 // Do a CORS request to get Davis weather hourly forecast
 
 // Create the XHR object.
@@ -12,7 +14,7 @@ function createCORSRequest(method, url) {
 // Make the actual CORS request.
 function makeCorsRequest() {
 
-  let url = "http://api.openweathermap.org/data/2.5/forecast/hourly?q=Davis,CA,US&units=imperial&APPID=43b14c4193c2fc236bbfaef7b0b2e860"
+  let url = `http://api.openweathermap.org/data/2.5/forecast/hourly?q=${cityName},CA,US&units=imperial&APPID=43b14c4193c2fc236bbfaef7b0b2e860`
 
   let xhr = createCORSRequest('GET', url);
 
