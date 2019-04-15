@@ -1,25 +1,39 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width">
-            <title>demo CORS request</title>
-        </head>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>myWeatherApp</title>
+        <link rel="stylesheet" href="assets/style.css">
+        <link rel="stylesheet" href="assets/reset.css">
+    </head>
 
     <body>
 
         <header>
-        <h2>Our App</h2>
+            <div id="introduction">
+                <h2>main title</h2>
+                <h3>sub title</h3>
+                
+                    
+                <input type="text" id="choose-city" value="Davis,CA">
+                <button id="submit-button">Submit</button>
+                
+            </div>
+            <div id="current-forecast"></div>
+            <div id="doppler-image"></div>
         </header>
+        <main>
+            <h2>Our App Main</h2>
+        </main>
 
-        <p>Check the Javascript console to see the returned JSON. </p>
+       
         
 
 
         <!-- execute the Javascript for this page -->
         <script src="scripts/makeRequest.js"></script> 
         <script src="scripts/main.js"></script>
-        
-
+    
     </body>
 </html>
