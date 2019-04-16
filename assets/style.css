@@ -54,16 +54,22 @@ h3{
     margin-left: 0;
 }
 
-#current-time {
+#current-forecast{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+#current-time {
+    order: 1; 
 }
 
 #current-icon{
-
+    order: 0; 
 }
 
 #current-temp{
-
+    order: 2; 
 }
 
 
