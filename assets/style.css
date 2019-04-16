@@ -17,12 +17,20 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 h2{
     color: white;
-    font-size: 5vw;
+    font-size: 7vw;
 }
+
+@media(min-width: 400px){
+    .test{
+        display: none;
+    }
+}
+
 h3{
     color: mediumblue;
 }
@@ -68,20 +76,25 @@ h3{
 
 #current-time {
     order: 1;
-    background-color: white; 
+    //background-color: white; 
     flex: 1 1 auto;
     font-size: 35pt;
 }
 
 #current-icon{
     order: 0; 
-    background-color: red; 
+    //background-color: red; 
     flex: 0 1 100vw;
 }
 
+.v1 {
+    order:2;
+    border-left: 2px solid black;
+}
+
 #current-temp{
-    order: 2; 
-    background-color: blue; 
+    order: 3; 
+    //background-color: blue; 
     flex: 1 1 auto;
     font-size: 85pt;
 }
