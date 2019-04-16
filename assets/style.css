@@ -11,6 +11,12 @@ body{
     flex-direction: column;
 }
 
+#introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 h2{
     color: white;
     font-size: 5vw;
@@ -33,7 +39,7 @@ h3{
 }
 
 #choose-city{
-    background-color: rgb(51, 47, 149);
+    background-color: rgb(46, 49, 146);
     color: white;
     outline: none;
     border: none;
@@ -42,20 +48,32 @@ h3{
 }
 
 #submit-button{
-    background-color: rgb(116, 149, 215);
-    color: white;
+    background-color: rgb(123, 148, 214);
+    color: rgb(210,219,226);
     border: none;
     margin-left: 0;
 }
 
-main{
-    display: flex;
+#current-time {
+
 }
+
+#current-icon{
+
+}
+
+#current-temp{
+
+}
+
 
 #doppler-image{
    display: none;
 }
 
+main{
+    display: flex;
+}
 /* @media (min-width: 500px){
     #doppler-image{
         display: flex;
