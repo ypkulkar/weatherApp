@@ -22,8 +22,8 @@ orscFunction = function(){
     }
 };
 
-xhr = makeCorsRequest();
-xhr.onreadystatechange = orscFunction;
+//xhr = makeCorsRequest();
+//xhr.onreadystatechange = orscFunction;
 
 
 

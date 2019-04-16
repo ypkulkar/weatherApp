@@ -1,34 +1,59 @@
 body{
     min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
 }
 
 #upper{
     background: linear-gradient(rgb(73,138,220),rgb(98,59,156));
     display: flex;
+    flex: 1;
+    flex-direction: column;
 }
 
-#upper > div{
-    width: 20%;
+h2{
+    color: white;
+    font-size: 5vw;
+}
+h3{
+    color: mediumblue;
 }
 
-#introduction{
-    background-color: yellow;
+#input-section{
+    display: flex;
+    flex-direction: column;
 }
 
-main{
-    background-color: yellow;
+#input-section > p{
+    color: white;
+}
+
+#box-button{
     display: flex;
 }
 
-p, h3, h2{
-    width: 10%;
+#choose-city{
+    background-color: rgb(51, 47, 149);
+    color: white;
+    outline: none;
+    border: none;
+    margin-right: 0;
+    padding: 0;
 }
 
+#submit-button{
+    background-color: rgb(116, 149, 215);
+    color: white;
+    border: none;
+    margin-left: 0;
+}
+
+main{
+    display: flex;
+}
 
 #doppler-image{
-   //display: none;
-   height: 30px;
-   width: 30px;
+   display: none;
 }
 
 /* @media (min-width: 500px){
