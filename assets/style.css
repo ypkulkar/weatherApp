@@ -77,6 +77,8 @@ h3{
 #current-time {
     order: 1;
     //background-color: white; 
+    display: flex;
+    justify-content: center;
     flex: 1 1 auto;
     font-size: 35pt;
 }
@@ -94,6 +96,8 @@ h3{
 
 #current-temp{
     order: 3; 
+    display: flex;
+    justify-content: center;
     //background-color: blue; 
     flex: 1 1 auto;
     font-size: 85pt;
