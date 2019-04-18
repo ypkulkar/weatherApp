@@ -55,6 +55,21 @@ function updateScreen(obj){
     const currentIcon = document.querySelector("#current-icon");
     currentIcon.src = getImgUrl(obj.list[0].weather[0].icon);
 
+    //Update future weather
+    
+    for(let i = 1; i < 6; i++){
+        let futureTemp = document.querySelector(`#temp${i}`);
+        futureTemp.textContent = Math.floor(obj.list[i].main.temp);
+
+        let futureTime = document.querySelector(`#time${i}`);
+        futureTime.textContent = getTimeStr(today.getHours() + i);
+
+        let futureIcon = document.querySelector(`#icon${i}`);
+        futureIcon.src = getImgUrl(obj.list[i].weather[0].icon);
+        
+    }
+
+
 }
 
 function getTimeStr(tm){
