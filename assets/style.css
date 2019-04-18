@@ -75,12 +75,16 @@ h3{
 }
 
 #current-time {
-    order: 1;
-    //background-color: white; 
+    order: 1;   
     display: flex;
     justify-content: center;
     flex: 1 1 auto;
     font-size: 35pt;
+    flex-direction: column;
+}
+
+#current-time > span{
+    text-align: center;
 }
 
 #current-icon{
