@@ -25,7 +25,7 @@
                 
             </div>
             <div id="current-forecast">
-                <p id="current-time"><span>current</span><span id="main-time">10</span></p>
+                <p id="current-time"><span>current</span><span id="main-time"></span></p>
                 <img id="current-icon" src="" alt="">
                 <div class="v1"></div>
                 <p id="current-temp"></p>
@@ -34,8 +34,10 @@
             
             <img id="doppler-image" src="http://radar.weather.gov/ridge/Overlays/Topo/Short/DAX_Topo_Short.jpg" alt="temp">
             
+            <button id="up-arrow">UpArrow</button>
         </div>
-        <main>
+        <div id="lower">
+            <button id="down-arrow">DownArrow</button>
             <div id="forecast1">
                 <p class="time" id="time1"></p>
                 <img class="icon" id="icon1" src="" alt="">
@@ -61,7 +63,7 @@
                 <img class="icon" id="icon5" src="" alt="">
                 <p class="temperature" id="temp5"></p>
             </div>
-        </main>
+        </div>
 
         <!-- execute the Javascript for this page -->
         <script src="scripts/makeRequest.js"></script> 

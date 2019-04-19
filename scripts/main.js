@@ -4,7 +4,6 @@ var object;
 var today = new Date();
 
 const submitButton = document.querySelector("#submit-button");
-
 submitButton.addEventListener("click",function(){
    xhr = makeCorsRequest();
    xhr.onreadystatechange = orscFunction;
@@ -28,6 +27,27 @@ xhr = makeCorsRequest();
 xhr.onreadystatechange = orscFunction;
 
 
+
+
+const upArrow = document.querySelector("#up-arrow");
+upArrow.addEventListener("click",toggleMobile);
+
+const downArrow = document.querySelector("#down-arrow");
+downArrow.addEventListener("click",toggleMobile);
+
+function toggleMobile(){
+    const upper = document.querySelector("#upper");
+    const lower = document.querySelector("#lower");
+
+    if(upper.style.display != "none"){
+        upper.style.display = "none";
+        lower.style.display = "flex";
+    }
+    else{
+        upper.style.display = "flex";
+        lower.style.display = "none";
+    }
+}
 
 
 
@@ -65,7 +85,7 @@ function updateScreen(obj){
         futureTemp.textContent = Math.floor(obj.list[i].main.temp);
 
         let futureTime = document.querySelector(`#time${i}`);
-        futureTime.textContent = getTimeStr(curr_time + i);
+        futureTime.textContent = getTimeStrFuture(curr_time + i);
 
         let futureIcon = document.querySelector(`#icon${i}`);
         futureIcon.src = getImgUrl(obj.list[i].weather[0].icon);
@@ -80,12 +100,28 @@ function getTimeStr(tm){
     let str = "";
 
     if(tm == 0){
-        str = "12 AM";
+        str = "12AM";
     } else if(tm == 12){
-        str = "12 PM";
+        str = "12PM";
     } else{
         const ampm = (tm > 12)?"PM":"AM";
-        str = `${tm%12} ${ampm}`;
+        str = `${tm%12}${ampm}`;
+    }
+
+    return str;
+}
+
+function getTimeStrFuture(tm){
+    tm = tm % 24;
+    let str = "";
+
+    if(tm == 0){
+        str = "12:00 am";
+    } else if(tm == 12){
+        str = "12:00 pm";
+    } else{
+        const ampm = (tm > 12)?"pm":"am";
+        str = `${tm%12}:00 ${ampm}`;
     }
 
     return str;

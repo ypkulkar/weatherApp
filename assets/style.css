@@ -102,7 +102,6 @@ h3{
     order: 3; 
     display: flex;
     justify-content: center;
-    //background-color: blue; 
     flex: 1 1 auto;
     font-size: 85pt;
 }
@@ -112,11 +111,30 @@ h3{
    display: none;
 }
 
-main{
-    display: flex;
-    text-align: center;
-    
+#lower{
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
 }
+
+#lower > div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.time{
+    width: 33vw;
+    flex: 2 2 33vw;
+}
+.icon{
+    width: 33vw;
+    flex: 2 2 33vw;
+}
+.temperature{
+    width: 33vw;
+    flex: 2 2 33vw;
+}
+
 /* @media (min-width: 500px){
     #doppler-image{
         display: flex;
