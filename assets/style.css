@@ -6,7 +6,8 @@ body{
 
 #upper{
     background: linear-gradient(rgb(73,138,220),rgb(98,59,156));
-    display: flex;
+    //display: flex;
+    display: none;
     flex: 1;
     flex-direction: column;
     padding-left: 30px;
@@ -112,7 +113,8 @@ h3{
 }
 
 #lower{
-    display: none;
+    //display: none;
+    display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
@@ -122,22 +124,36 @@ h3{
     justify-content: space-evenly;
 }
 
+
 .time{
+    display: flex;
     width: 33vw;
     flex: 2 2 33vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .icon{
+    display: flex;
     width: 33vw;
     flex: 2 2 33vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .temperature{
+    display: flex;
     width: 33vw;
     flex: 2 2 33vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* @media (min-width: 500px){
-    #doppler-image{
-        display: flex;
-    }
-} */
+
+.v2{
+    height: 1px;
+    background-color: grey;
+}
+
 
