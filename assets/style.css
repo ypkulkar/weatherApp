@@ -114,6 +114,8 @@ h3{
 
 main{
     display: flex;
+    text-align: center;
+    
 }
 /* @media (min-width: 500px){
     #doppler-image{

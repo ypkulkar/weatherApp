@@ -45,24 +45,27 @@ function printDisplay(obj){
 }
 
 function updateScreen(obj){
+    //Get time using the object
+    let curr_time = obj.list[0].dt_txt.split(" ")[1].split(":")[0] - 7;
+    curr_time = (curr_time < 0) ? curr_time += 24 : curr_time;
+
     //Update current weather
     const currentTemp = document.querySelector("#current-temp");
     currentTemp.textContent = Math.floor(obj.list[0].main.temp);
 
     const currentTime = document.querySelector("#main-time");
-    currentTime.textContent = getTimeStr(today.getHours());
+    currentTime.textContent = getTimeStr(curr_time);
 
     const currentIcon = document.querySelector("#current-icon");
     currentIcon.src = getImgUrl(obj.list[0].weather[0].icon);
 
     //Update future weather
-    
     for(let i = 1; i < 6; i++){
         let futureTemp = document.querySelector(`#temp${i}`);
         futureTemp.textContent = Math.floor(obj.list[i].main.temp);
 
         let futureTime = document.querySelector(`#time${i}`);
-        futureTime.textContent = getTimeStr(today.getHours() + i);
+        futureTime.textContent = getTimeStr(curr_time + i);
 
         let futureIcon = document.querySelector(`#icon${i}`);
         futureIcon.src = getImgUrl(obj.list[i].weather[0].icon);
