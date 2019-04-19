@@ -132,6 +132,8 @@ h3{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 8vw;
 }
 .icon{
     display: flex;
@@ -148,6 +150,8 @@ h3{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 20vw;
 }
 
 
