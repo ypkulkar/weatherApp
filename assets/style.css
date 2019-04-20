@@ -120,6 +120,12 @@ h3{
    display: none;
 }
 
+#up-arrow{
+    background-color: none;
+    border: none;
+    background: none;
+}
+
 #lower{
     display: none;
     //display: flex;
