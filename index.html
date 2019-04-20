@@ -13,7 +13,7 @@
     <body>
         <div id="upper">
             <div id="introduction">
-                <h2>Local Weather <br class="test"> Six Hour Forecast</h2>
+                <h2>Local Weather <br class="h2-break"> Six Hour Forecast</h2>
                 <h3>Northern California with doppler radar</h3>
                 <div id="input-section">
                     <p>Forecast for</p>
@@ -31,8 +31,11 @@
                 <p id="current-temp"></p>
             </div>
             
+            <div id="doppler-images">
+                <img id="topo-map" src="http://radar.weather.gov/ridge/Overlays/Topo/Short/DAX_Topo_Short.jpg" alt="temp">
+                <img id="doppler-cities" src="http://radar.weather.gov/ridge/Overlays/Cities/Short/DAX_City_Short.gif" alt="temp">
+            </div>
             
-            <img id="doppler-image" src="http://radar.weather.gov/ridge/Overlays/Topo/Short/DAX_Topo_Short.jpg" alt="temp">
             
             <button id="up-arrow">UpArrow</button>
         </div>
@@ -71,7 +74,9 @@
 
         <!-- execute the Javascript for this page -->
         <script src="scripts/makeRequest.js"></script> 
+        <script src="scripts/collectPastDoppler.js"></script>
         <script src="scripts/main.js"></script>
+        
     
     </body>
 </html>

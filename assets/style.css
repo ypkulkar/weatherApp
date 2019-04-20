@@ -32,8 +32,8 @@ h2{
     padding-top: 16vw;
 }
 
-@media(min-width: 400px){
-    .test{
+@media(min-width: 500px){
+    .h2-break{
         display: none;
     }
 }
@@ -115,13 +115,27 @@ h3{
     font-size: 85pt;
 }
 
+#doppler-images{
+    display: none;
+    justify-content: space-around;
+    clip-path: circle(40%);
+}
 
-#doppler-image{
-   display: none;
+#topo-map{
+    position: relative;
+}
+
+#doppler-cities{
+    position: absolute;
+}
+
+@media(min-width: 500px){
+    #doppler-images{
+        display: flex;
+    }
 }
 
 #up-arrow{
-    background-color: none;
     border: none;
     background: none;
 }
@@ -136,6 +150,11 @@ h3{
 #lower > div{
     display: flex;
     justify-content: space-evenly;
+}
+
+#down-arrow{
+    border: none;
+    background: none;
 }
 
 
