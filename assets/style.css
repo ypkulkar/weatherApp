@@ -25,6 +25,7 @@ body{
 @media(min-width: 800px){
     #upper{
         flex-direction: column;
+        height: 50vw;
     }
 }
 
@@ -69,6 +70,11 @@ h2{
         display: none;
     }
 }
+@media(min-width: 800px){
+    h2{
+        font-size: 3vw;
+    }
+}
 
 h3{
     color: mediumblue;
@@ -79,6 +85,12 @@ h3{
     h3{
         padding-top: 2vw;
         font-size: 4vw;
+    }
+
+
+@media(min-width: 800px){
+    h3{
+        font-size: 2vw;
     }
 }
 
@@ -211,7 +223,7 @@ h3{
 #doppler-images{
     display: none;
     justify-content: space-around;
-    clip-path: circle(40%);
+    //clip-path: circle(40%);
 }
 
 @media(min-width: 500px){
