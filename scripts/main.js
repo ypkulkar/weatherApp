@@ -38,12 +38,33 @@ upArrow.addEventListener("click",slideUp);
 
 const downArrow = document.querySelector("#down-arrow");
 //downArrow.addEventListener("click",toggleMobile);
-
+downArrow.addEventListener("click",slideDown);
 
 function slideUp(){
+    console.log("sliding up");
+    
+    upper.classList.remove('slideDownAnimation');
     upper.classList.add('slideUpAnimation');
+
+    lower.classList.remove('slideDownAnimation');
     lower.classList.add('slideUpAnimation');
+
+    upArrow.classList.remove('slideDownAnimation');
     upArrow.classList.add('slideUpAnimation');
+
+}
+
+function slideDown(){
+    console.log("sliding down");
+
+    upper.classList.remove('slideUpAnimation');
+    upper.classList.add('slideDownAnimation');
+
+    lower.classList.remove('slideUpAnimation');
+    lower.classList.add('slideDownAnimation');
+
+    upArrow.classList.remove('slideUpAnimation');
+    upArrow.classList.add('slideDownAnimation');
 }
 
 function toggleMobile(){
