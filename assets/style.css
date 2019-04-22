@@ -302,7 +302,15 @@ h3{
     clip-path: circle(40%);
 }
 
+#upper.slideUpAnimation {
+    //transition: 3s;
+    //opacity: 0;
+    background-color: red;
+}
 
+#up-arrow.slideUpAnimation {
+    background-color: green;
+}
 
 #up-arrow{
     border: none;

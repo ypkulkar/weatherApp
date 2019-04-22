@@ -31,13 +31,20 @@ xhr.onreadystatechange = orscFunction;
 
 
 const upArrow = document.querySelector("#up-arrow");
-upArrow.addEventListener("click",toggleMobile);
+var upper = document.querySelector("#upper");
+//upArrow.addEventListener("click",toggleMobile);
+upArrow.addEventListener("click",slideUp);
 
 const downArrow = document.querySelector("#down-arrow");
-downArrow.addEventListener("click",toggleMobile);
+//downArrow.addEventListener("click",toggleMobile);
+
+function slideUp(){
+    upper.classList.add('slideUpAnimation');
+    upArrow.classList.add('slideUpAnimation');
+}
 
 function toggleMobile(){
-    const upper = document.querySelector("#upper");
+    //const upper = document.querySelector("#upper");
     const lower = document.querySelector("#lower");
 
     if(upper.style.display != "none"){
