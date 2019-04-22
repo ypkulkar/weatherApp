@@ -13,7 +13,7 @@
     flex-direction: column;
 }
 
-#upper{
+#upper{ 
     background: linear-gradient(rgb(73,138,220),rgb(98,59,156));
     display: flex;
     flex: 1;
