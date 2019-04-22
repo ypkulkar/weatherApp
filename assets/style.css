@@ -417,19 +417,12 @@ h3{
 
 @media(min-width: 800px){
     .time{
-        width: 20vw;
-        height: 5vw;
-        flex-direction: row;
-        font-size: 2vw;
+        font-size: 3vw;
     }
     .icon{
-        width: 10vw;
-        flex-direction: row;
-        height: 10vw;
     }
     .temperature{
         width: 10vw;
-        flex-direction: row;
         font-size: 8vw;
     }
 }
@@ -445,6 +438,13 @@ h3{
     .v2{
         height: auto;
         border-left: 1px solid grey;
+    }
+}
+
+@media(min-width: 800px){
+    .v2{
+        margin-top: 5vw;
+        height: 28vw;
     }
 }
 
