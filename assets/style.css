@@ -6,6 +6,7 @@ body{
 
 #upper{
     background: linear-gradient(rgb(73,138,220),rgb(98,59,156));
+    //background: pink;
     display: flex;
     //display: none;
     flex: 1;
@@ -20,6 +21,7 @@ body{
     flex-direction: column;
     align-items: center;
     //text-align: center;
+    flex: 1;
 }
 
 #introduction > h2{
@@ -81,6 +83,7 @@ h3{
     align-items: stretch;
     align-content: stretch;
     font-family: 'Saira Extra Condensed', sans-serif;
+    flex: 1;
 }
 
 #current-time {
@@ -138,6 +141,18 @@ h3{
 #up-arrow{
     border: none;
     background: none;
+    display:flex;
+    justify-content: space-around;
+}
+
+@media(min-width: 500px){
+    #up-arrow{
+        display: none;
+    }
+}
+
+#up-arrow > img{
+    width: 10vw;
 }
 
 #lower{
@@ -147,14 +162,41 @@ h3{
     flex-direction: column;
 }
 
+@media(min-width: 500px){
+    #lower{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
 #lower > div{
     display: flex;
     justify-content: space-evenly;
 }
 
+@media(min-width: 500px){
+    #lower > div{
+        display: flex;
+        flex-direction: column;
+        
+    }
+}
+
 #down-arrow{
     border: none;
     background: none;
+    display:flex;
+    justify-content: space-around;
+}
+
+@media(min-width: 500px){
+    #down-arrow{
+        display: none;
+    }
+}
+
+#down-arrow > img{
+    width: 10vw;
 }
 
 
@@ -187,10 +229,39 @@ h3{
     font-size: 20vw;
 }
 
+@media(min-width: 500px){
+    .time{
+        width: 20vw;
+        //height: 33vw;
+        flex-direction: row;
+        font-size: 5vw;
+    }
+    .icon{
+        width: 20vw;
+        //height: 33vw;
+        flex-direction: row;
+    }
+    .temperature{
+        width: 20vw;
+        //height: 33vw;
+        flex-direction: row;
+        font-size: 15vw;
+    }
+}
+
 
 .v2{
     height: 1px;
     background-color: grey;
+}
+
+
+@media(min-width: 500px){
+    .v2{
+        height: 100px;
+        width: 5px;
+        background-color: grey;
+    }
 }
 
 
