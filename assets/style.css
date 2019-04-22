@@ -258,9 +258,8 @@ h3{
 
 @media(min-width: 500px){
     .v2{
-        height: 100px;
-        width: 5px;
-        background-color: grey;
+        height: auto;
+        border-left: 1px solid grey;
     }
 }
 
