@@ -60,6 +60,7 @@ function createImgTags(){
         let img = document.createElement("img");
         img.id = `doppler-${i}`;
         img.src = imageArray[i].src;
+        img.classList.add("doppler-img-size");
         img.style.position = "absolute";
         if(i == 0){
             img.style.display = "flex";

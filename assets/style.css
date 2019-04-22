@@ -6,22 +6,34 @@ body{
 
 #upper{
     background: linear-gradient(rgb(73,138,220),rgb(98,59,156));
-    //background: pink;
     display: flex;
-    //display: none;
     flex: 1;
     flex-direction: column;
     padding-left: 30px;
-    padding-right: 30px;
-    //justify-content: space-between;
+    padding-right: 30px;  
+}
+
+@media(min-width: 500px){
+    #upper{
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding-left: 5vw;
+        padding-right: 5vw;  
+    }
 }
 
 #introduction {
     display: flex;
     flex-direction: column;
     align-items: center;
-    //text-align: center;
     flex: 1;
+}
+
+@media(min-width: 500px){
+    #introduction{
+        order: 0;
+        flex: 0 1 100vw;
+    }
 }
 
 #introduction > h2{
@@ -35,6 +47,11 @@ h2{
 }
 
 @media(min-width: 500px){
+    h2{
+        padding-top: 8vw;
+        font-size: 5vw;
+    }
+
     .h2-break{
         display: none;
     }
@@ -45,15 +62,32 @@ h3{
     padding-top: 5vw;
 }
 
+@media(min-width: 500px){
+    h3{
+        padding-top: 2vw;
+        font-size: 4vw;
+    }
+}
+
 #input-section{
     display: flex;
     flex-direction: column;
     padding-top: 4vw;
 }
-
 #input-section > p{
     color: white;
 }
+
+@media(min-width: 500px){
+    #input-section{
+        flex-direction: row;
+    }
+    #input-section > p{
+        padding-right: 1vw;
+    }
+}
+
+
 
 #box-button{
     display: flex;
@@ -66,6 +100,7 @@ h3{
     border: none;
     margin-right: 0;
     padding: 0;
+    padding-left: 2vw;
 }
 
 #submit-button{
@@ -73,6 +108,12 @@ h3{
     color: rgb(210,219,226);
     border: none;
     margin-left: 0;
+}
+
+@media(min-width: 500px){
+    #submit-button{
+        margin-left: 2vw;
+    }
 }
 
 #current-forecast{
@@ -84,6 +125,15 @@ h3{
     align-content: stretch;
     font-family: 'Saira Extra Condensed', sans-serif;
     flex: 1;
+    color: white;
+}
+
+@media(min-width: 500px){
+    #current-forecast{
+        order: 1;
+        flex: 1 1 auto;
+        width: 20vw;
+    }
 }
 
 #current-time {
@@ -95,14 +145,26 @@ h3{
     flex-direction: column;
 }
 
+@media(min-width: 500px){
+    #current-time {
+        font-size: 4vw;
+    }
+}
+
 #current-time > span{
     text-align: center;
 }
 
 #current-icon{
-    order: 0; 
-    //background-color: red; 
+    order: 0;  
     flex: 0 1 100vw;
+}
+
+@media(min-width: 500px){
+    #current-icon{
+        height: 20vw;
+        width: 20vw;
+    }
 }
 
 .v1 {
@@ -113,15 +175,30 @@ h3{
 #current-temp{
     order: 3; 
     display: flex;
+    align-items: center;
     justify-content: center;
     flex: 1 1 auto;
     font-size: 85pt;
+}
+
+@media(min-width: 500px){
+    #current-temp{
+        font-size: 8vw;
+    }
 }
 
 #doppler-images{
     display: none;
     justify-content: space-around;
     clip-path: circle(40%);
+}
+
+@media(min-width: 500px){
+    #doppler-images{
+        order: 2;
+        display: flex;
+        flex: 0 1 50vw;
+    }
 }
 
 #topo-map{
@@ -132,11 +209,13 @@ h3{
     position: absolute;
 }
 
-@media(min-width: 500px){
-    #doppler-images{
-        display: flex;
-    }
+.doppler-img-size{
+    max-width: 40vw;
+    max-height: 40vw;
+    clip-path: circle(40%);
 }
+
+
 
 #up-arrow{
     border: none;
@@ -157,7 +236,6 @@ h3{
 
 #lower{
     display: none;
-    //display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
@@ -178,6 +256,7 @@ h3{
     #lower > div{
         display: flex;
         flex-direction: column;
+        align-items: center;
         
     }
 }
@@ -232,20 +311,19 @@ h3{
 @media(min-width: 500px){
     .time{
         width: 20vw;
-        //height: 33vw;
+        height: 5vw;
         flex-direction: row;
         font-size: 5vw;
     }
     .icon{
-        width: 20vw;
-        //height: 33vw;
+        width: 10vw;
         flex-direction: row;
+        height: 10vw;
     }
     .temperature{
         width: 20vw;
-        //height: 33vw;
         flex-direction: row;
-        font-size: 15vw;
+        font-size: 10vw;
     }
 }
 
