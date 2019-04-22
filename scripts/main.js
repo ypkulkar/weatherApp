@@ -29,6 +29,7 @@ xhr.onreadystatechange = orscFunction;
 
 
 
+
 const upArrow = document.querySelector("#up-arrow");
 upArrow.addEventListener("click",toggleMobile);
 
@@ -49,6 +50,19 @@ function toggleMobile(){
     }
 }
 
+let tabWidth = window.matchMedia("(min-width: 500px)");
+tabWidth.addListener(setDisplay);
+
+function setDisplay(){
+    if(tabWidth.matches){
+        upper.style.display = "flex";
+        lower.style.display = "flex";
+    }
+    else{
+        upper.style.display = "flex";
+        lower.style.display = "none";
+    }
+}
 
 
 /* -------------------------------- Helper Functions ---------------------------------------- */
@@ -70,7 +84,7 @@ function updateScreen(obj){
     curr_time = (curr_time < 0) ? curr_time += 24 : curr_time;
 
     //Update current weather
-    const currentTemp = document.querySelector("#current-temp");
+    const currentTemp = document.querySelector("#temp0");
     currentTemp.textContent = Math.floor(obj.list[0].main.temp);
 
     const currentTime = document.querySelector("#main-time");
