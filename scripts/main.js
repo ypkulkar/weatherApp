@@ -26,15 +26,55 @@ orscFunction = function(){
 xhr = makeCorsRequest();
 xhr.onreadystatechange = orscFunction;
 
-
-
-
-
 const upArrow = document.querySelector("#up-arrow");
-upArrow.addEventListener("click",toggleMobile);
+//upArrow.addEventListener("click",toggleMobile);
+upArrow.addEventListener("click",toggleScreenUp);
 
 const downArrow = document.querySelector("#down-arrow");
-downArrow.addEventListener("click",toggleMobile);
+//downArrow.addEventListener("click",toggleMobile);
+upArrow.addEventListener("click",toggleScreenDown);
+
+
+function toggleScreenUp(){
+    let lower = document.querySelector("#lower");
+    var upper = document.querySelector("#upper");
+
+    //upper.style.opacity = `1`;
+    //upper.style.backgroundColor = `pink`;
+    //upper.style.display = `none`;
+    let i = 1;
+        
+    lower.style.maxHeight = `0vh`;
+    //lower.style.display = `flex`;
+
+    let upArrow = document.querySelector("#up-arrow");
+    upArrow.style.display = `none`;
+
+    let currentIcon = document.querySelector("#current-icon");
+    currentIcon.style.display = `none;`
+
+
+    let timer = setInterval(function() {
+        console.log(i);
+        //upper.style.opacity = `${i}`;
+        upper.style.maxHeight = `${100-i}vh`
+        //lower.style.maxHeight = `${i}vh`;
+        //i = i - 0.01;
+        i++;
+        if(i>100){
+            clearInterval(timer);
+        }
+    
+    },5);
+
+    
+
+}
+
+
+function toggleScreenDown(){
+}
+
 
 function toggleMobile(){
     const upper = document.querySelector("#upper");
