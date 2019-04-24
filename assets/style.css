@@ -43,6 +43,7 @@ html, body{
     #upper{
         flex-direction: column;
         //height: 70vw;
+        flex: 5 5 0;
     }
 }
 
@@ -91,7 +92,8 @@ h2{
 @media(min-width: 500px){
     h2{
         padding-top: 7vh;
-        font-size: 5vw;
+        //font-size: 5vw;
+        font-size: 20pt;
     }
 
     .h2-break{
@@ -101,7 +103,7 @@ h2{
 
 @media(min-width: 800px){
     h2{
-        font-size: 4vw;
+        //font-size: 4vw;
         padding-top: 5vw;
     }
 }
@@ -115,7 +117,8 @@ h3{
 @media(min-width: 500px){
     h3{
         padding-top: 2vh;
-        font-size: 4vw;
+        //font-size: 4vw;
+        font-size: 16pt;
     }
 }
 
@@ -123,7 +126,7 @@ h3{
 @media(min-width: 800px){
     h3{
         padding-top: 1.5vw;
-        font-size: 2.8vw;
+        //font-size: 2.8vw;
     }
 }
 
@@ -144,7 +147,8 @@ h3{
     }
     #input-section > p{
         padding-right: 1vw;
-        font-size: 2.5vw;
+        //font-size: 2.5vw;
+        font-size: 10pt;
         padding-top: 0.5vh;
     }
 }
@@ -186,15 +190,19 @@ h3{
 
 @media(min-width: 500px){
     #choose-city{
-        width: 30vw;
+        //width: 30vw;
+        width: 190px;
         height: 4vw;
-        font-size: 3vw;
+        height: 25px;
+        //font-size: 3vw;
+        font-size: 12pt;
     }
 }
 
 @media(min-width: 800px){
     #choose-city{
-        width: 22vw;
+        //width: 22vw;
+        width: 100px;
         height: 3vw;
         font-size: 2vw;
         padding-left: 2vw;
@@ -212,15 +220,17 @@ h3{
 @media(min-width: 500px){
     #submit-button{
         margin-left: 2vw;
-        width: 12vw;
-        font-size: 2vw;
+        //width: 12vw;
+        width: 75px;
+        //font-size: 2vw;
+        font-size: 8pt;
     }
 }
 
 @media(min-width: 800px){
     #submit-button{
         margin-left: 1.5vw;
-        width: 8vw;
+        //width: 8vw;
         font-size: 1.5vw;
     }
 }
@@ -243,7 +253,7 @@ h3{
         order: 1;
         flex: 1 1 auto;
         width: 20vw;
-        padding-bottom: 8vh;
+        /* padding-bottom: 8vh; */
     }
 }
 
@@ -254,6 +264,7 @@ h3{
         flex-wrap: nowrap;
         width: 40vw;
         margin-bottom: unset;
+        //height: 10px;
     }
 
 }
@@ -270,7 +281,8 @@ h3{
 
 @media(min-width: 500px){
     #current-time {
-        font-size: 4vw;
+        //font-size: 4vw;
+        font-size: 16pt
     }
 }
 
@@ -303,7 +315,8 @@ h3{
 @media(min-width: 500px){
 
     #current-icon{
-        width: 35vw;
+        //width: 35vw;
+        width: 100px;
         padding-top: 4vh;
     }
 
@@ -311,7 +324,7 @@ h3{
     #current-icon-box{
         height: 20vw;
         width: 20vw;
-        margin-bottom: 1vw;
+        margin-bottom: 1vh;
     }
 }
 
@@ -354,7 +367,8 @@ h3{
 
 @media(min-width: 500px){
     #current-temp{
-        font-size: 8vw;
+        //font-size: 8vw;
+        font-size: 36pt;
     }
 }
 
@@ -372,6 +386,7 @@ h3{
 @media(min-width: 500px){
     #doppler-images{
         order: 2;
+        //background-color: red;
         display: flex;
         flex: 0 1 50vw;
     }
@@ -393,8 +408,10 @@ h3{
 }
 
 .doppler-img-size{
-    max-width: 40vw;
-    max-height: 40vw;
+/*     max-width: 40vw;
+    max-height: 40vw; */
+    max-width: 235px;
+    max-height: 235px;
     clip-path: circle(40%);
 }
 
@@ -429,7 +446,14 @@ h3{
     #lower{
         display: flex;
         flex-direction: row;
-        height: 35vw;
+        //height: 35vw;
+    }
+}
+
+
+@media(min-width: 800px){
+    #lower{
+        flex: 2 2 0;'
     }
 }
 
@@ -505,14 +529,14 @@ h3{
 @media(min-width: 500px){
     .time{
         width: 20vw;
-        height: 5vw;
+        //height: 5vw;
         flex-direction: row;
         font-size: 5vw;
     }
     .icon{
         width: 10vw;
         flex-direction: row;
-        height: 10vw;
+        //height: 10vw;
     }
     .temperature{
         width: 20vw;
