@@ -18,6 +18,7 @@
     display: flex;
     flex: 1;
     flex-direction: column;
+    height: 70vw;
 }
 
 @media(min-width: 500px){
@@ -33,7 +34,6 @@
 @media(min-width: 800px){
     #upper{
         flex-direction: column;
-        height: 50vw;
     }
 }
 
@@ -131,6 +131,7 @@ h3{
 @media(min-width: 500px){
     #input-section{
         flex-direction: row;
+        padding-top: 4vw;
     }
     #input-section > p{
         padding-right: 1vw;
@@ -232,6 +233,7 @@ h3{
         order: 1;
         flex: 1 1 auto;
         width: 20vw;
+        padding-bottom: 10vw;
     }
 }
 
@@ -273,19 +275,32 @@ h3{
 }
 
 #current-icon{
+    width: 70vw;
+}
+
+#current-icon-box{
     order: 0;  
     flex: 1 1 100vw;
+    text-align: center;
 }
 
 @media(min-width: 500px){
+
     #current-icon{
+        width: 35vw;
+        padding-top: 4vh;
+    }
+
+
+    #current-icon-box{
         height: 20vw;
         width: 20vw;
+        margin-bottom: 1vw;
     }
 }
 
 @media(min-width: 800px){
-    #current-icon{
+    #current-icon-box{
         order: 1;  
         flex: 1 1 auto;
     }
