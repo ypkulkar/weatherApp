@@ -1,5 +1,5 @@
 html, body{
-    /* height: 90vh;
+/*     height: 90vh;
     width: 100vw; */
 }
 
@@ -31,9 +31,10 @@ html, body{
 @media(min-width: 500px){
     #upper{
         flex-wrap: wrap;
+        //justify-content: center;
         flex-direction: row;
-        padding-left: 5vw;
-        padding-right: 5vw;  
+/*         padding-left: 20px;
+        padding-right: 20px;   */
         filter: drop-shadow(0 0 30px);
         flex: 7 7 0;
     }
@@ -43,7 +44,9 @@ html, body{
     #upper{
         flex-direction: column;
         //height: 70vw;
-        flex: 5 5 0;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        flex: 4 4 0;
     }
 }
 
@@ -253,7 +256,9 @@ h3{
         order: 1;
         flex: 1 1 auto;
         width: 20vw;
-        /* padding-bottom: 8vh; */
+        padding-bottom: 30px;
+        //justify-content: flex-end;
+        
     }
 }
 
@@ -264,9 +269,9 @@ h3{
         flex-wrap: nowrap;
         width: 40vw;
         margin-bottom: unset;
+        justify-content: center;
         //height: 10px;
     }
-
 }
 
 
@@ -282,7 +287,8 @@ h3{
 @media(min-width: 500px){
     #current-time {
         //font-size: 4vw;
-        font-size: 16pt
+        font-size: 16pt;
+        flex: 1 1 0;
     }
 }
 
@@ -302,14 +308,16 @@ h3{
 }
 
 #current-icon-box{
-    order: 0;  
+    order: 0;
     flex: 1 1 100vw;
     text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    //
     margin-top: 6vh;
-    //margin-bottom: 5vw;
+    //
+    margin-bottom: 5vw;
 }
 
 @media(min-width: 500px){
@@ -318,6 +326,7 @@ h3{
         //width: 35vw;
         width: 100px;
         padding-top: 4vh;
+        justify-content: center;
     }
 
 
@@ -325,6 +334,7 @@ h3{
         height: 20vw;
         width: 20vw;
         margin-bottom: 1vh;
+        justify-content: flex-end;
     }
 }
 
@@ -332,6 +342,7 @@ h3{
     #current-icon-box{
         order: 1;  
         flex: 1 1 auto;
+        justify-content: center;
     }
 }
 
@@ -345,7 +356,7 @@ h3{
         //height: 12vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
     }
 }
 
@@ -353,6 +364,7 @@ h3{
 @media(min-width: 800px){
     .v1{
         display: none;
+        justify-content: center;
     }
 }
 
@@ -369,6 +381,7 @@ h3{
     #current-temp{
         //font-size: 8vw;
         font-size: 36pt;
+        flex: 1 1 0;
     }
 }
 
@@ -380,7 +393,7 @@ h3{
 
 #doppler-images{
     display: none;
-    justify-content: space-around;
+    //justify-content: space-around;
 }
 
 @media(min-width: 500px){
@@ -532,9 +545,11 @@ h3{
         //height: 5vw;
         flex-direction: row;
         font-size: 5vw;
+        font-size: 20pt;
     }
     .icon{
-        width: 10vw;
+        //width: 10vw;
+        width: 65px;
         flex-direction: row;
         //height: 10vw;
     }
@@ -542,6 +557,7 @@ h3{
         width: 20vw;
         flex-direction: row;
         font-size: 10vw;
+        font-size: 38pt;
     }
 }
 
@@ -550,6 +566,7 @@ h3{
         font-size: 3vw;
     }
     .icon{
+        width: 10vw;
     }
     .temperature{
         width: 10vw;
@@ -574,7 +591,7 @@ h3{
 @media(min-width: 800px){
     .v2{
         margin-top: 5vw;
-        height: 28vw;
+        //height: 28vw;
     }
 }
 
