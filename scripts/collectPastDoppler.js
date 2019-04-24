@@ -52,7 +52,7 @@ function getTenImages() {
 
 }
 
-//getTenImages();
+getTenImages();
 
 function createImgTags(){
     const con = document.querySelector("#doppler-images");

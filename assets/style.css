@@ -90,7 +90,7 @@ h2{
 
 @media(min-width: 500px){
     h2{
-        padding-top: 8vw;
+        padding-top: 7vh;
         font-size: 5vw;
     }
 
@@ -114,7 +114,7 @@ h3{
 
 @media(min-width: 500px){
     h3{
-        padding-top: 2vw;
+        padding-top: 2vh;
         font-size: 4vw;
     }
 }
@@ -140,12 +140,12 @@ h3{
 @media(min-width: 500px){
     #input-section{
         flex-direction: row;
-        padding-top: 4vw;
+        padding-top: 3.5vh;
     }
     #input-section > p{
         padding-right: 1vw;
         font-size: 2.5vw;
-        padding-top: 1vw;
+        padding-top: 0.5vh;
     }
 }
 
@@ -243,7 +243,7 @@ h3{
         order: 1;
         flex: 1 1 auto;
         width: 20vw;
-        padding-bottom: 10vw;
+        padding-bottom: 8vh;
     }
 }
 
