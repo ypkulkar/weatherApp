@@ -34,18 +34,34 @@ xhr.onreadystatechange = orscFunction;
 
 
 
-
+var upper = document.querySelector("#upper");
+var lower = document.querySelector("#lower");
 
 const upArrow = document.querySelector("#up-arrow");
-upArrow.addEventListener("click",toggleMobile);
+//upArrow.addEventListener("click",toggleMobile);
+upArrow.addEventListener("click",slideUp);
 
 const downArrow = document.querySelector("#down-arrow");
-downArrow.addEventListener("click",toggleMobile);
+//downArrow.addEventListener("click",toggleMobile);
+downArrow.addEventListener("click",slideDown);
+
+
+function slideUp(){
+    console.log("sliding up");
+    
+    upper.classList.remove('slideDownAnimation');
+    upper.classList.add('slideUpAnimation');
+    //lower.style.display = "flex";
+}
+
+function slideDown(){
+    console.log("sliding down");
+
+    upper.classList.remove('slideUpAnimation');
+    upper.classList.add('slideDownAnimation');
+}
 
 function toggleMobile(){
-    const upper = document.querySelector("#upper");
-    const lower = document.querySelector("#lower");
-
     if(upper.style.display != "none"){
         upper.style.display = "none";
         lower.style.display = "flex";
@@ -108,11 +124,8 @@ function updateScreen(obj){
         futureTime.textContent = getTimeStrFuture(curr_time + i);
 
         let futureIcon = document.querySelector(`#icon${i}`);
-        futureIcon.src = getImgUrl(obj.list[i].weather[0].icon);
-        
+        futureIcon.src = getImgUrl(obj.list[i].weather[0].icon);   
     }
-
-
 }
 
 function getTimeStr(tm){

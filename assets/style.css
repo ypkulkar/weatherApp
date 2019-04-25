@@ -9,6 +9,19 @@ html, body{
     }
 }
 
+#upper.slideUpAnimation {
+    //transition: all 1s ease-in;
+    transition: 4s;
+    max-height: 0vh;
+    //background-color: black;
+/*     overflow: hidden; */
+}
+
+#upper.slideDownAnimation {
+    transition: 4s;
+    max-height: 100vh;
+}
+
 
 #parent-div{
     min-height: 100vh; 
@@ -455,7 +468,7 @@ h3{
 }
 
 #lower{
-    display: none;
+    display: flex;
     justify-content: space-between;
     flex-direction: column;
     flex: 4 4 0;
