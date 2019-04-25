@@ -17,6 +17,7 @@ html, body{
     display: flex;
     flex-direction: column;
     //flex: 1;
+    overflow: hidden;
 } 
 
 #upper{ 
@@ -257,7 +258,7 @@ h3{
         flex: 1 1 auto;
         width: 20vw;
         padding-bottom: 30px;
-        //justify-content: flex-end;
+        justify-content: flex-end;
         
     }
 }
@@ -288,7 +289,8 @@ h3{
     #current-time {
         //font-size: 4vw;
         font-size: 16pt;
-        flex: 1 1 0;
+        padding-right: 40px;
+        flex: 0 0 0;
     }
 }
 
@@ -296,6 +298,7 @@ h3{
     #current-time {  
         order: 0;
         flex: 1 1 auto;
+        padding-right: 0px;
     }
 }
 
@@ -326,6 +329,7 @@ h3{
         //width: 35vw;
         width: 100px;
         padding-top: 4vh;
+        padding-right: 60px;
         justify-content: center;
     }
 
@@ -351,18 +355,20 @@ h3{
     border-left: 2px solid black;
     
 }
-@media(max-width: 500px){
+@media(min-width: 500px){
     .v1{
-        //height: 12vh;
-        display: flex;
+        //height: 100px;
+        //padding-top: 10px;
+/*         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: flex-end; */
     }
 }
 
 
 @media(min-width: 800px){
     .v1{
+        height: unset;
         display: none;
         justify-content: center;
     }
@@ -381,13 +387,17 @@ h3{
     #current-temp{
         //font-size: 8vw;
         font-size: 36pt;
-        flex: 1 1 0;
+        flex: 0 0 0;
+        padding-right: 20px;
+        padding-left: 40px;
     }
 }
 
 @media(min-width: 800px){
     #current-temp{
         flex: 1 1 auto;
+        padding-right: 0px;
+        padding-left: 0px;
     }
 }
 
