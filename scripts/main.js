@@ -13,15 +13,12 @@ orscFunction = function(){
     if(xhr.readyState == 4){ // Request is done
         if(xhr.status == 200){ // Everything is smooth
             object = JSON.parse(xhr.responseText);
-            //printDisplay(object);
             if(!checkDist(object)){
                 alert("Not Found");
             }
             else{
                 updateScreen(object);
             }
-            // console.log(object);
-            //checkDist(object);
         }
         if(xhr.status == 404){
             console.log("Not found");
@@ -32,17 +29,13 @@ orscFunction = function(){
 xhr = makeCorsRequest();
 xhr.onreadystatechange = orscFunction;
 
-
-
 var upper = document.querySelector("#upper");
 var lower = document.querySelector("#lower");
 
 const upArrow = document.querySelector("#up-arrow");
-//upArrow.addEventListener("click",toggleMobile);
 upArrow.addEventListener("click",slideUp);
 
 const downArrow = document.querySelector("#down-arrow");
-//downArrow.addEventListener("click",toggleMobile);
 downArrow.addEventListener("click",slideDown);
 
 
@@ -50,29 +43,15 @@ function slideUp(){
     console.log("sliding up");
     console.log(upper);
     upper.classList.remove('slideDownAnimation');
-    //upper.classList.remove('reset');
     upper.classList.add('slideUpAnimation');
-    //lower.style.display = "flex";
 }
 
 function slideDown(){
     console.log("sliding down");
     
     upper.classList.remove('slideUpAnimation');
-    //upper.classList.remove('reset');
     upper.classList.add('slideDownAnimation');
 }
-
-// function toggleMobile(){
-//     if(upper.style.display != "none"){
-//         upper.style.display = "none";
-//         lower.style.display = "flex";
-//     }
-//     else{
-//         upper.style.display = "flex";
-//         lower.style.display = "none";
-//     }
-// }
 
 let tabWidth = window.matchMedia("(min-width: 500px)");
 tabWidth.addListener(setDisplay);
@@ -86,14 +65,6 @@ function setDisplay(){
     else{
         upper.classList.remove('reset');
     }
-//     if(tabWidth.matches){
-//         upper.style.display = "flex";
-//         lower.style.display = "flex";
-//     }
-//     else{
-//         upper.style.display = "flex";
-//         lower.style.display = "none";
-//     }
 }
 
 
@@ -231,8 +202,6 @@ function checkDist(obj){
     //bool
     let ret = (dist < 151)?true:false;
     console.log(ret);
-    
-
 
     return ret;
     // use function below

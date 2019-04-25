@@ -5,31 +5,16 @@ html, body{
 @media(min-width: 500px){
     body{
         display: inline-block;
-           
     }
 }
 
-#upper.reset {
-    //max-height: 100vh;
-}
-
-#lower.slideUpAnimation {
-    //transition: 2s;
-    //transform: translateY(150%);
-}
-
 #upper.slideUpAnimation {
-    //transition: all 1s ease-in;
     transition: 1s;
-    //transform: translateY(-150%);
     max-height: 0vh;
-    //background-color: black;
-/*     overflow: hidden; */
 }
 
 #upper.slideDownAnimation {
     transition: 1s;
-    //transform: translateY(0);
     max-height: 100vh;
 }
 
@@ -49,7 +34,6 @@ html, body{
     flex-direction: column;
     height: 100vh;
     overflow: hidden;
-
 }
 
 @media(min-width: 500px){
@@ -174,8 +158,6 @@ h3{
     }
 }
 
-
-
 #box-button{
     display: flex;
     padding-top: 2vh;
@@ -282,9 +264,7 @@ h3{
 #current-time {
     order: 1;   
     display: flex;
-    //align-items: center;
     justify-content: center;
-    //align-self: flex-end;
     flex: 1 1 auto;
     font-size: 30pt;
     flex-direction: column;
@@ -397,7 +377,6 @@ h3{
 
 @media(min-width: 500px){
     #current-temp{
-        //font-size: 8vw;
         font-size: 36pt;
         flex: 0 0 0;
         padding-right: 20px;
@@ -556,7 +535,6 @@ h3{
 .icon{
     display: flex;
     width: 95px;
-    //flex: 2 2 33vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -604,7 +582,6 @@ h3{
     }
 }
 
-
 .v2{
     height: 1px;
     background-color: grey;
@@ -628,10 +605,3 @@ h3{
 .degree-symbol{
     font-family: Arial, Helvetica, sans-serif;
 }
-
-
-
-
-
-
-
