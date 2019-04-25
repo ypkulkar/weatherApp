@@ -308,8 +308,8 @@ h3{
 @media(min-width: 500px){
 
     #current-icon{
-        width: 120px;
-        padding-right: 60px;
+        width: 15vh;
+        padding-right: 70px;
         justify-content: center;
     }
 
@@ -407,7 +407,7 @@ h3{
     #doppler-images{
         order: 2;
         flex: 0 0 100vw;
-        margin-left: 5vw;
+        margin-left: 3vw;
         margin-top: 1vh;
     }
 }
@@ -421,15 +421,15 @@ h3{
 }
 
 .doppler-img-size{
-    max-width: 235px;
-    max-height: 235px;
+    width: 35vh;
+    height: 35vh;
     clip-path: circle(40%);
 }
 
 @media(min-width: 800px){
     .doppler-img-size{
-        max-width: 380px;
-        max-height: 380px;
+        width: 55vh;
+        height: 55vh;
         clip-path: circle(40%);
     }
 }
