@@ -9,16 +9,27 @@ html, body{
     }
 }
 
+#upper.reset {
+    //max-height: 100vh;
+}
+
+#lower.slideUpAnimation {
+    //transition: 2s;
+    //transform: translateY(150%);
+}
+
 #upper.slideUpAnimation {
     //transition: all 1s ease-in;
-    transition: 4s;
+    transition: 2s;
+    //transform: translateY(-150%);
     max-height: 0vh;
     //background-color: black;
 /*     overflow: hidden; */
 }
 
 #upper.slideDownAnimation {
-    transition: 4s;
+    transition: 2s;
+    //transform: translateY(0);
     max-height: 100vh;
 }
 

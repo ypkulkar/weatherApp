@@ -48,42 +48,49 @@ downArrow.addEventListener("click",slideDown);
 
 function slideUp(){
     console.log("sliding up");
-    
+    console.log(upper);
     upper.classList.remove('slideDownAnimation');
+    //upper.classList.remove('reset');
     upper.classList.add('slideUpAnimation');
     //lower.style.display = "flex";
 }
 
 function slideDown(){
     console.log("sliding down");
-
+    
     upper.classList.remove('slideUpAnimation');
+    //upper.classList.remove('reset');
     upper.classList.add('slideDownAnimation');
 }
 
-function toggleMobile(){
-    if(upper.style.display != "none"){
-        upper.style.display = "none";
-        lower.style.display = "flex";
-    }
-    else{
-        upper.style.display = "flex";
-        lower.style.display = "none";
-    }
-}
+// function toggleMobile(){
+//     if(upper.style.display != "none"){
+//         upper.style.display = "none";
+//         lower.style.display = "flex";
+//     }
+//     else{
+//         upper.style.display = "flex";
+//         lower.style.display = "none";
+//     }
+// }
 
 let tabWidth = window.matchMedia("(min-width: 500px)");
 tabWidth.addListener(setDisplay);
 
 function setDisplay(){
     if(tabWidth.matches){
-        upper.style.display = "flex";
-        lower.style.display = "flex";
+        upper.classList.remove('slideUpAnimation');
+        upper.classList.remove('slideDownAnimation');
+        upper.classList.add('reset');
     }
-    else{
-        upper.style.display = "flex";
-        lower.style.display = "none";
-    }
+//     if(tabWidth.matches){
+//         upper.style.display = "flex";
+//         lower.style.display = "flex";
+//     }
+//     else{
+//         upper.style.display = "flex";
+//         lower.style.display = "none";
+//     }
 }
 
 
