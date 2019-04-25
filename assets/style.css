@@ -370,15 +370,6 @@ h3{
     margin-left: 25px;
 }
 
-/* #current-time {
-    order: 1;   
-    display: flex;
-    justify-content: center;
-    flex: 1 1 auto;
-    font-size: 30pt;
-    flex-direction: column;
-} */
-
 @media(min-width: 500px){
     #current-temp{
         //font-size: 8vw;
