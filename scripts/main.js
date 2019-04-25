@@ -83,6 +83,9 @@ function setDisplay(){
         upper.classList.remove('slideDownAnimation');
         upper.classList.add('reset');
     }
+    else{
+        upper.classList.remove('reset');
+    }
 //     if(tabWidth.matches){
 //         upper.style.display = "flex";
 //         lower.style.display = "flex";
