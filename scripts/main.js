@@ -13,18 +13,16 @@ orscFunction = function(){
     if(xhr.readyState == 4){ // Request is done
         if(xhr.status == 200){ // Everything is smooth
             object = JSON.parse(xhr.responseText);
-            //printDisplay(object);
             if(!checkDist(object)){
                 alert("Not Found");
             }
             else{
                 updateScreen(object);
             }
-            // console.log(object);
-            //checkDist(object);
         }
         if(xhr.status == 404){
             console.log("Not found");
+            alert("Not Found");
         }
     }
 };
@@ -38,41 +36,21 @@ var upper = document.querySelector("#upper");
 var lower = document.querySelector("#lower");
 
 const upArrow = document.querySelector("#up-arrow");
-//upArrow.addEventListener("click",toggleMobile);
 upArrow.addEventListener("click",slideUp);
 
 const downArrow = document.querySelector("#down-arrow");
-//downArrow.addEventListener("click",toggleMobile);
 downArrow.addEventListener("click",slideDown);
 
 
 function slideUp(){
-    console.log("sliding up");
-    console.log(upper);
     upper.classList.remove('slideDownAnimation');
-    //upper.classList.remove('reset');
     upper.classList.add('slideUpAnimation');
-    //lower.style.display = "flex";
 }
 
 function slideDown(){
-    console.log("sliding down");
-    
     upper.classList.remove('slideUpAnimation');
-    //upper.classList.remove('reset');
     upper.classList.add('slideDownAnimation');
 }
-
-// function toggleMobile(){
-//     if(upper.style.display != "none"){
-//         upper.style.display = "none";
-//         lower.style.display = "flex";
-//     }
-//     else{
-//         upper.style.display = "flex";
-//         lower.style.display = "none";
-//     }
-// }
 
 let tabWidth = window.matchMedia("(min-width: 500px)");
 tabWidth.addListener(setDisplay);
@@ -81,34 +59,14 @@ function setDisplay(){
     if(tabWidth.matches){
         upper.classList.remove('slideUpAnimation');
         upper.classList.remove('slideDownAnimation');
-        upper.classList.add('reset');
-    }
-//     if(tabWidth.matches){
-//         upper.style.display = "flex";
-//         lower.style.display = "flex";
-//     }
-//     else{
-//         upper.style.display = "flex";
-//         lower.style.display = "none";
-//     }
-}
-
-
-/* -------------------------------- Helper Functions ---------------------------------------- */
-
-function printDisplay(obj){
-    console.log(`City: ${obj.city.name}`);
-    console.log(`Current: ${(today.getHours())%12}`);
-    console.log(`Temp: ${obj.list[0].main.temp}`);
-    console.log(`Icon: ${obj.list[0].weather[0].description}`)
-    console.log("-------");
-    for(let i = 1; i < 6; i++){
-        console.log(`Hour${i}: ${((today.getHours()+i)%12 == 0)?12:(today.getHours()+i)%12}`)
     }
 }
+
+
+/* -------- Helper Functions ----------- */
+
 
 function updateScreen(obj){
-    //Get time using the object
     let curr_time = obj.list[0].dt_txt.split(" ")[1].split(":")[0] - 7;
     curr_time = (curr_time < 0) ? curr_time += 24 : curr_time;
 
@@ -218,21 +176,13 @@ function getImgUrl(iconId){
 }
 
 function checkDist(obj){
-    // get coordinates
     let lat1 = obj.city.coord["lat"];
     let lon1 = obj.city.coord["lon"];
     let lat2 = 38.5449;
     let lon2 = -121.7405;
     let dist = getDistInMiles(lat1,lon1,lat2,lon2);
-    console.log(dist);
-    //bool
     let ret = (dist < 151)?true:false;
-    console.log(ret);
-    
-
-
     return ret;
-    // use function below
 }
 
 
@@ -244,8 +194,7 @@ function getDistInMiles(lat1, lon1, lat2, lon2) {
     let a = 
       Math.sin(dLat/2) * Math.sin(dLat/2) +
       Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
-      Math.sin(dLon/2) * Math.sin(dLon/2)
-      ; 
+      Math.sin(dLon/2) * Math.sin(dLon/2); 
     let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
     let d = R * c; // Distance in km
     d = d * 0.62137119; // Distance in miles

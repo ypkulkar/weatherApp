@@ -9,27 +9,14 @@ html, body{
     }
 }
 
-#upper.reset {
-    //max-height: 100vh;
-}
-
-#lower.slideUpAnimation {
-    //transition: 2s;
-    //transform: translateY(150%);
-}
 
 #upper.slideUpAnimation {
-    //transition: all 1s ease-in;
     transition: 2s;
-    //transform: translateY(-150%);
     max-height: 0vh;
-    //background-color: black;
-/*     overflow: hidden; */
 }
 
 #upper.slideDownAnimation {
     transition: 2s;
-    //transform: translateY(0);
     max-height: 100vh;
 }
 
@@ -47,8 +34,8 @@ html, body{
     flex: 1;
     flex-direction: column;
     height: 100vh;
+    max-height: 100vh;
     overflow: hidden;
-
 }
 
 @media(min-width: 500px){
@@ -81,8 +68,6 @@ html, body{
         flex: 0 1 100vw;
     }
 }
-
-
 
 #introduction > h2{
     text-align: center;
@@ -138,7 +123,6 @@ h3{
     }
 }
 
-
 @media(min-width: 800px){
     h3{
         font-size: 14pt;
@@ -173,12 +157,9 @@ h3{
     }
 }
 
-
-
 #box-button{
     display: flex;
     padding-top: 2vh;
-    //padding-bottom: 2vh;
 }
 
 @media(min-width: 500px){
@@ -281,9 +262,7 @@ h3{
 #current-time {
     order: 1;   
     display: flex;
-    //align-items: center;
     justify-content: center;
-    //align-self: flex-end;
     flex: 1 1 auto;
     font-size: 30pt;
     flex-direction: column;
@@ -337,7 +316,6 @@ h3{
         justify-content: center;
     }
 
-
     #current-icon-box{
         padding-top: 20px;
         height: 20vh;
@@ -377,7 +355,6 @@ h3{
     }
 }
 
-
 @media(min-width: 800px){
     .v1{
         display: none;
@@ -396,7 +373,6 @@ h3{
 
 @media(min-width: 500px){
     #current-temp{
-        //font-size: 8vw;
         font-size: 36pt;
         flex: 0 0 0;
         padding-right: 20px;
@@ -438,6 +414,7 @@ h3{
 
 #topo-map{
     position: relative;
+    filter: grayscale(100%);
 }
 
 #doppler-cities{
@@ -458,14 +435,13 @@ h3{
     }
 }
 
-
-
 #up-arrow{
     border: none;
     background: none;
     display:flex;
     justify-content: space-around;
     padding-bottom: 3vw;
+    outline: none;
 }
 
 @media(min-width: 500px){
@@ -509,8 +485,7 @@ h3{
     #lower > div{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        
+        align-items: center;  
     }
 }
 
@@ -519,6 +494,7 @@ h3{
     background: none;
     display:flex;
     justify-content: space-around;
+    outline: none;
 }
 
 @media(min-width: 500px){
@@ -532,13 +508,11 @@ h3{
     width: 10vw;
 }
 
-
 @media(max-width: 499px){
     #forecast1,#forecast2,#forecast3,#forecast4,#forecast5{
         height: 18.5vh;
     }
 }
-
 
 .time{
     display: flex;
@@ -553,7 +527,6 @@ h3{
 .icon{
     display: flex;
     width: 95px;
-    //flex: 2 2 33vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -601,12 +574,10 @@ h3{
     }
 }
 
-
 .v2{
     height: 1px;
     background-color: grey;
 }
-
 
 @media(min-width: 500px){
     .v2{
@@ -625,10 +596,3 @@ h3{
 .degree-symbol{
     font-family: Arial, Helvetica, sans-serif;
 }
-
-
-
-
-
-
-
