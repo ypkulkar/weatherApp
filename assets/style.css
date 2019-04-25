@@ -20,7 +20,7 @@ html, body{
 
 #upper.slideUpAnimation {
     //transition: all 1s ease-in;
-    transition: 2s;
+    transition: 1s;
     //transform: translateY(-150%);
     max-height: 0vh;
     //background-color: black;
@@ -28,7 +28,7 @@ html, body{
 }
 
 #upper.slideDownAnimation {
-    transition: 2s;
+    transition: 1s;
     //transform: translateY(0);
     max-height: 100vh;
 }
@@ -467,6 +467,7 @@ h3{
     display:flex;
     justify-content: space-around;
     padding-bottom: 3vw;
+    outline: none;
 }
 
 @media(min-width: 500px){
@@ -520,6 +521,7 @@ h3{
     background: none;
     display:flex;
     justify-content: space-around;
+    outline: none;
 }
 
 @media(min-width: 500px){
