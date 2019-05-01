@@ -41,4 +41,3 @@ function makeCorsRequest() {
 // run this code to make request when this script file gets executed 
 //makeCorsRequest();
 
-console.log("hi")

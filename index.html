@@ -19,7 +19,7 @@
                     <div id="input-section">
                         <p>Forecast for</p>
                         <div id="box-button">
-                            <input type="text" id="choose-city" value="Davis,CA">
+                            <input type="text" id="choose-city" autocomplete="off" value="Davis, CA">
                             <button id="submit-button">submit</button>
                         </div>
                     </div>
@@ -27,51 +27,52 @@
                 </div>
                 <div id="current-forecast">
                     <p id="current-time"><span>current</span><span id="main-time"></span></p>
-                    <img id="current-icon" src="" alt="">
+                    <div id="current-icon-box">
+                        <img id="current-icon" src="" alt="Current Weather">
+                    </div>
                     <div class="v1"></div>
                     <p id="current-temp"><span id="temp0"></span><span class="degree-symbol">&deg;</span></p>
                 </div>
                 
                 <div id="doppler-images">
-                    <img id="topo-map" class="doppler-img-size" src="http://radar.weather.gov/ridge/Overlays/Topo/Short/DAX_Topo_Short.jpg" alt="temp">
-                    <img id="doppler-cities" class="doppler-img-size" src="http://radar.weather.gov/ridge/Overlays/Cities/Short/DAX_City_Short.gif" alt="temp">
+                    <img id="topo-map" class="doppler-img-size" src="http://radar.weather.gov/ridge/Overlays/Topo/Short/DAX_Topo_Short.jpg" alt="Doppler Images">
                 </div>
                 
                 <button id="up-arrow">
-                    <img src="assets/img/upArrow.svg" alt="">
+                    <img src="assets/img/upArrow.svg" alt="Up Arrow">
                 </button>
             </div>
             <div id="lower">
                 <button id="down-arrow">
-                    <img src="assets/img/downArrow.svg" alt="">
+                    <img src="assets/img/downArrow.svg" alt="Down Arrow">
                 </button>
                 <div id="forecast1">
                     <p class="time" id="time1"></p>
-                    <img class="icon" id="icon1" src="" alt="">
+                    <img class="icon" id="icon1" src="" alt="2nd hour weather">
                     <p class="temperature"><span id="temp1"></span><span class="degree-symbol">&deg;</span></p>
                 </div>
                 <div class="v2"></div>
                 <div id="forecast2">
                     <p class="time" id="time2"></p>
-                    <img class="icon" id="icon2" src="" alt="">
+                    <img class="icon" id="icon2" src="" alt="3rd hour weather">
                     <p class="temperature"><span id="temp2"></span><span class="degree-symbol">&deg;</span></p>
                 </div>
                 <div class="v2"></div>
                 <div id="forecast3">
                     <p class="time" id="time3"></p>
-                    <img class="icon" id="icon3" src="" alt="">
+                    <img class="icon" id="icon3" src="" alt="4th hour weather">
                     <p class="temperature"><span id="temp3"></span><span class="degree-symbol">&deg;</span></p>
                 </div>
                 <div class="v2"></div>
                 <div id="forecast4">
                     <p class="time" id="time4"></p>
-                    <img class="icon" id="icon4" src="" alt="">
+                    <img class="icon" id="icon4" src="" alt="5th hour weather">
                     <p class="temperature"><span id="temp4"></span><span class="degree-symbol">&deg;</span></p>
                 </div>
                 <div class="v2"></div>
                 <div id="forecast5">
                     <p class="time" id="time5"></p>
-                    <img class="icon" id="icon5" src="" alt="">
+                    <img class="icon" id="icon5" src="" alt="6th hour weather">
                     <p class="temperature"><span id="temp5"></span><span class="degree-symbol">&deg;</span></p>
                 </div>
             </div>
@@ -81,6 +82,5 @@
         <script src="scripts/collectPastDoppler.js"></script>
         <script src="scripts/main.js"></script>
         
-    
     </body>
 </html>
