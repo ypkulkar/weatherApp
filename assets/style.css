@@ -29,8 +29,11 @@ html, body{
 } 
 
 #upper{ 
-    background: linear-gradient(rgb(73,138,220),rgb(98,59,156));
     display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgb(73,138,220),rgb(98,59,156));
     flex: 1;
     flex-direction: column;
     height: 100vh;
@@ -427,12 +430,14 @@ h3{
     clip-path: circle(40%);
 }
 
+
 @media(min-width: 800px){
     .doppler-img-size{
         width: 55vh;
         height: 55vh;
         clip-path: circle(40%);
     }
+
 }
 
 #up-arrow{
@@ -455,6 +460,7 @@ h3{
 }
 
 #lower{
+
     display: flex;
     justify-content: space-between;
     flex-direction: column;

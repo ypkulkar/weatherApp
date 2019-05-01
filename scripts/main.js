@@ -41,7 +41,6 @@ upArrow.addEventListener("click",slideUp);
 const downArrow = document.querySelector("#down-arrow");
 downArrow.addEventListener("click",slideDown);
 
-
 function slideUp(){
     upper.classList.remove('slideDownAnimation');
     upper.classList.add('slideUpAnimation');
